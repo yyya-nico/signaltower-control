@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signal Tower Controller</title>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <form>
+      <label for="ip">IPアドレス</label>
+      <input type="text" id="ip" required pattern="^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(:[0-9]+)?$" />
+      <fieldset>
+        <legend>表示灯制御</legend>
+        <fieldset>
+          <legend class="red">赤</legend>
+          <button value="red1" type="submit">点灯</button>
+          <button value="red2" type="submit">点滅1</button>
+          <button value="red3" type="submit">点滅2</button>
+          <button value="red0" type="submit">消灯</button>
+        </fieldset>
+        <fieldset>
+          <legend class="yellow">黄</legend>
+          <button value="yellow1" type="submit">点灯</button>
+          <button value="yellow2" type="submit">点滅1</button>
+          <button value="yellow3" type="submit">点滅2</button>
+          <button value="yellow0" type="submit">消灯</button>
+        </fieldset>
+        <fieldset>
+          <legend class="green">緑</legend>
+          <button value="green1" type="submit">点灯</button>
+          <button value="green2" type="submit">点滅1</button>
+          <button value="green3" type="submit">点滅2</button>
+          <button value="green0" type="submit">消灯</button>
+        </fieldset>
+        <fieldset>
+          <legend class="buzzer">ブザー</legend>
+          <button value="buzzer1" type="submit">パターン1 速い断続</button>
+          <button value="buzzer2" type="submit">パターン2 遅い断続</button>
+          <button value="buzzer3" type="submit">パターン3 短音</button>
+          <button value="buzzer4" type="submit">パターン4 連続</button>
+          <button value="buzzer0" type="submit">停止</button>
+        </fieldset>
+        <button value="clear" type="submit">復帰</button>
+    </form>
+  </body>
+</html>
