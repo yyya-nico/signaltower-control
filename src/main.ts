@@ -17,14 +17,14 @@ form.addEventListener('submit', e => {
     return;
   }
   const alertParam = '999999'.split('');
-  const replaceIndexes = {
+  const replaceIndex = {
     red: 0,
     yellow: 1,
     green: 2,
     buzzer: 5,
-  };
+  }[type];
   const num = submitterValue.replace(type, '');
-  alertParam[replaceIndexes[type]] = num;
+  alertParam[replaceIndex] = num;
   url.searchParams.set('alert', alertParam.join(''));
   fetch(url);
 });
